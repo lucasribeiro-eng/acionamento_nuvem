@@ -3,35 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acionamento na nuvem</title>
+  <title>Painel de acionamento</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="container">
     <section class="card">
-      <h1>Acionamento em tempo real</h1>
-      <p class="subtitle">
-        Esta versão é feita para rodar com um servidor na nuvem. Os dois computadores abrem a mesma URL pública.
-      </p>
+      <div class="header">
+        <div>
+          <h1>Painel de acionamento</h1>
+          <p class="subtitle">
+            Pressione e segure qualquer botão. Enquanto o clique estiver pressionado, todos os outros usuários verão o botão aceso.
+          </p>
+        </div>
+        <div id="connectionBadge" class="badge offline">Desconectado</div>
+      </div>
 
       <div class="field">
         <label for="nome">Seu nome ou identificação</label>
-        <input id="nome" type="text" placeholder="Ex.: PC Produção 01" maxlength="40" />
+        <input id="nome" type="text" placeholder="Ex.: Operador 01" maxlength="40" />
       </div>
 
       <div class="actions">
-        <button id="btnEntrar">Entrar</button>
-        <button id="btnAcionar" disabled>Acionar botão</button>
+        <button id="btnEntrar" class="enter-button">Entrar</button>
       </div>
 
       <div id="status" class="status info">
         Digite seu nome e clique em Entrar.
       </div>
 
-      <div class="history">
-        <h2>Histórico</h2>
-        <ul id="historico"></ul>
-      </div>
+      <section class="panel">
+        <button class="action-button" data-button-id="1" disabled>
+          <span class="action-title">Botão 1</span>
+          <span class="action-state">Livre</span>
+        </button>
+
+        <button class="action-button" data-button-id="2" disabled>
+          <span class="action-title">Botão 2</span>
+          <span class="action-state">Livre</span>
+        </button>
+
+        <button class="action-button" data-button-id="3" disabled>
+          <span class="action-title">Botão 3</span>
+          <span class="action-state">Livre</span>
+        </button>
+
+        <button class="action-button" data-button-id="4" disabled>
+          <span class="action-title">Botão 4</span>
+          <span class="action-state">Livre</span>
+        </button>
+      </section>
     </section>
   </main>
 

@@ -1,7 +1,7 @@
 {
-  "name": "acionamento-nuvem",
-  "version": "1.0.0",
-  "description": "Aplicação de acionamento em tempo real para dois PCs usando servidor na nuvem",
+  "name": "acionamento-nuvem-4-botoes",
+  "version": "1.1.0",
+  "description": "Aplicação de acionamento em tempo real com 4 botões e servidor na nuvem",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
