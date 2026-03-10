@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acionamento na nuvem</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Acionamento em tempo real</h1>
+      <p class="subtitle">
+        Esta versão é feita para rodar com um servidor na nuvem. Os dois computadores abrem a mesma URL pública.
+      </p>
+
+      <div class="field">
+        <label for="nome">Seu nome ou identificação</label>
+        <input id="nome" type="text" placeholder="Ex.: PC Produção 01" maxlength="40" />
+      </div>
+
+      <div class="actions">
+        <button id="btnEntrar">Entrar</button>
+        <button id="btnAcionar" disabled>Acionar botão</button>
+      </div>
+
+      <div id="status" class="status info">
+        Digite seu nome e clique em Entrar.
+      </div>
+
+      <div class="history">
+        <h2>Histórico</h2>
+        <ul id="historico"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
